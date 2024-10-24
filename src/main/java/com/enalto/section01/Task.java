@@ -3,7 +3,6 @@ package com.enalto.section01;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.time.Duration;
 
 public class Task {
@@ -13,9 +12,9 @@ public class Task {
     public static void ioIntensive(int i) {
 
         try {
-            LOGGER.info("Starting io task {}", i);
-            Thread.sleep(Duration.ofSeconds(10));
-            LOGGER.info("Finished io task {}", i);
+            LOGGER.info("Starting io task {}. Thread information: {}", i, Thread.currentThread());
+            Thread.sleep(Duration.ofSeconds(5));
+            LOGGER.info("Finished io task {} Thread information: {}", i, Thread.currentThread());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

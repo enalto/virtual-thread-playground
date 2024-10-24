@@ -8,8 +8,8 @@ import java.util.concurrent.CountDownLatch;
 
 public class InboundOutboundTaskDemo {
 
-    private static final int MAX_PLATFORM_THREAD = 50_000;
-    private static final int MAX_VIRTUAL_THREAD = 50_000;
+    private static final int MAX_PLATFORM_THREAD = 10_000;
+    private static final int MAX_VIRTUAL_THREAD = 10_000;
     private static final Logger LOGGER = LoggerFactory.getLogger(InboundOutboundTaskDemo.class);
 
 
